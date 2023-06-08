@@ -25,7 +25,7 @@
     <tags>particle-life simulation art</tags>
     <summary>Particle Life in the terminal.</summary>
     <description>Makes the `particle life` command available. Documentation at [github/tom-mohr/particle-life-cli](https://github.com/tom-mohr/particle-life-cli).</description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>See [releases page](https://github.com/tom-mohr/particle-life-cli/releases) on GitHub.</releaseNotes>
     <!-- =============================== -->
   </metadata>
   <files>

@@ -1,0 +1,3 @@
+There is currently no way to verify checksum contents.
+If you want, you can build the binaries from source, as described [here](https://github.com/tom-mohr/particle-life-cli#build).
+However this Chocolatey package is maintained by me, Tom Mohr, who also maintains the software.
