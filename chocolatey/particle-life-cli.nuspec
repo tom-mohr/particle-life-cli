@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>particle-life-cli</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/tom-mohr/particle-life-cli</packageSourceUrl>
+    <owners>Tom Mohr</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Particle Life CLI (Portable)</title>
+    <authors>Tom Mohr</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://github.com/tom-mohr/particle-life-cli</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/tom-mohr/particle-life-cli/main/particle-life-cli.png</iconUrl>
+    <copyright>2023 Tom Mohr</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <licenseUrl>https://github.com/tom-mohr/particle-life-cli/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/tom-mohr/particle-life-cli</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <bugTrackerUrl>https://github.com/tom-mohr/particle-life-cli/issues</bugTrackerUrl>
+    <tags>particle-life simulation art</tags>
+    <summary>Particle Life in the terminal.</summary>
+    <description>Makes the `particle life` command available. Documentation at [github/tom-mohr/particle-life-cli](https://github.com/tom-mohr/particle-life-cli).</description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

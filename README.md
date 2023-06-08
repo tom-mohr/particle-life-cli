@@ -2,6 +2,26 @@
 
 The `particle-life` command for creating beautiful simulations in the terminal.
 
+If you don't know what Particle Life is, watch [this video](https://youtu.be/p4YirERTVF0) (showcase) and [this video](https://youtu.be/scvuli-zcRc) (detailed explanation).
+
+# Installation
+
+## Chocolatey (Windows)
+
+```sh
+choco install particle-life-cli
+```
+This will automatically make the `particle-life` command available in your terminal.
+
+## Manual Download (Windows, Linux)
+
+1. Visit the [latest release](https://github.com/tom-mohr/particle-life-cli/releases/latest) page on GitHub.
+2. Download the appropriate binary for your operating system:
+   - For Windows, download `particle-life.exe`.
+   - For Linux, download `particle-life`.
+
+**Note:** If you want to have access to the `particle-life` command from anywhere in your system, you can add the folder containing the binary to your system's PATH environment variable. This will allow you to run particle-life from any location in the command line. 
+
 # Usage
 
 After installation, you can execute the `particle-life` command from a terminal:
@@ -9,7 +29,7 @@ After installation, you can execute the `particle-life` command from a terminal:
 particle-life
 ```
 
-To quit, press `q`.
+Press `q` to quit.
 
 ## GUI Commands
 
@@ -105,4 +125,19 @@ Notes:
   since both these libraries are not being shipped with Windows.
   I'm using this implementation of getopt for Windows:
   [Chunde/getopt-for-windows](https://github.com/Chunde/getopt-for-windows).
+
+# Contributing
+
+Contributions are welcome!<br>
+For feature requests and bug reports create an issue in the [issues page](https://github.com/tom-mohr/particle-life-cli/releases/latest).
+
+# License
+
+This project is licensed under the [MIT License](https://github.com/tom-mohr/particle-life-cli/blob/main/LICENSE).
+
+# Contact
+
+Feel free to reach out to me with any questions or suggestions:
+
+- [Twitter](https://twitter.com/tom_mohr_)
 
