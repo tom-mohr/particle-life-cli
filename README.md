@@ -105,7 +105,7 @@ as if the user had pressed `Z`.
 
 Build executable:
 ```sh
-./build
+make
 ```
 
 Run executable:

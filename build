@@ -1,4 +1,0 @@
-#!/bin/bash
-
-mkdir -p dist
-gcc -o dist/particle-life particle-life.c -l ncurses -l m
