@@ -13,8 +13,8 @@ ifeq ($(OS),Windows_NT)
     # Windows specific settings
 	TARGET=particle-life.exe
 	LIBS += pdcurses/*.o getopt/*.o
-    RM=Remove-Item -Recurse -Force
-    MKDIR=New-Item -ItemType Directory -Force
+    RM=powershell Remove-Item -Recurse -Force
+    MKDIR=powershell New-Item -ItemType Directory -Force
 else
     # Linux specific settings
 	TARGET=particle-life
