@@ -1,0 +1,2 @@
+mkdir -p dist/linux
+gcc -o dist/linux/particle-life src/main.c -lncurses -lm

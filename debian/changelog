@@ -1,0 +1,11 @@
+particle-life-cli (1.0.1) focal; urgency=medium
+
+  * Include the binary in the package.
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Mon, 12 Jun 2023 15:34:18 +0530
+
+particle-life-cli (1.0.0) focal; urgency=medium
+
+  * Initial release.
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Thu, 08 Jun 2023 23:54:23 +0530

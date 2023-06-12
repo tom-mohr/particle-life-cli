@@ -1,0 +1,11 @@
+Source: particle-life-cli
+Section: games
+Priority: optional
+Maintainer: Tom Mohr <tom.g.mohr@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 4.6.2
+
+Package: particle-life-cli
+Architecture: amd64
+Depends: ${misc:Depends}
+Description: Particle Life in the terminal.
