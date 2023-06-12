@@ -1,3 +1,9 @@
+particle-life-cli (1.1.0) focal; urgency=medium
+
+  * In-place rendering to stdout with -O.
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Mon, 12 Jun 2023 23:48:39 +0530
+
 particle-life-cli (1.0.6) focal; urgency=medium
 
   * Move dependency "libncurses-dev" to Build-Depends.
