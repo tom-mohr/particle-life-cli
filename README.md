@@ -97,11 +97,12 @@ as if the user had pressed `p`, followed by `4`:
 ```
 
 Instead of having the interactive GUI open, you can also simply print the output to stdout with the `-o` flag.
-If you only want the program to display a single frame and then quit, use `-O` instead. 
+Use `-O` instead if you want the frame to be rendered in-place in the terminal, but still in stdtout.
 
+If you only want the program to display a single frame and then quit, add the `-q` flag.
 This allows you to do something like this:
 ```sh
-C:\users\tom> particle-life -O | tee frame.txt
+C:\users\tom> particle-life -oq | tee frame.txt
 ```
 This will write the first rendered frame into a new file `frame.txt`.
 

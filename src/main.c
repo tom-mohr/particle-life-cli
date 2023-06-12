@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <stdbool.h>
 
 #ifdef _WIN32
     #include "curses.h"
@@ -63,7 +64,8 @@ void print_help() {
     printf("                          1: color\n");
     printf("  -d                  disables clearing of the render buffer\n");
     printf("  -o                  output to stdout (disables GUI)\n");
-    printf("  -O                  like -o, but quits after the first rendered frame\n");
+    printf("  -O                  like -o, but draws the frames in-place\n");
+    printf("  -q                  quit after the first rendered frame\n");
     printf("  -W <width>          set the height of the text output\n");
     printf("  -H <height>         set the width of the text output\n");
     printf("  -P                  launch paused\n");
@@ -96,6 +98,8 @@ typedef struct {
 } ParticleSystem;
 
 typedef struct {
+    bool printInPlace;
+    bool printInPlaceIsFirstFrame;
     int w;
     int h;
     float zoom;
@@ -298,6 +302,15 @@ void renderText(ParticleSystem *system, UiSettings *ui, int *densityGridBuf) {
     int m = system->m;
     char *densityChars = ui->densityChars;
     size_t densityCharsLen = strlen(densityChars);
+    
+    if (ui->printInPlace) {
+        if (ui->printInPlaceIsFirstFrame) {
+            ui->printInPlaceIsFirstFrame = false;
+        } else {
+            // move cursor up
+            printf("\033[%dA", h);
+        }
+    }
 
     // draw grid
     for (int y = 0; y < h; y++) {
@@ -487,6 +500,8 @@ int main(int argc, char *argv[]) {
 
     // UiSettings defaults
     UiSettings ui;
+    ui.printInPlace = false;
+    ui.printInPlaceIsFirstFrame = true;
     ui.w = DEFAULT_W;
     ui.h = DEFAULT_H;
     ui.zoom = 1.0f;
@@ -538,9 +553,13 @@ int main(int argc, char *argv[]) {
                 ui.clear = false;
                 break;
             case 'O':
-                quitAfterOneFrame = true;
+                ui.printInPlace = true;
             case 'o':
                 showGui = false;
+                break;
+            case 'q':
+                quitAfterOneFrame = true;
+                ui.printInPlaceIsFirstFrame = true;
                 break;
             case 'W':
                 ui.w = atoi(optarg);
