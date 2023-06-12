@@ -1,4 +1,34 @@
-particle-life-cli (1.0.1) focal; urgency=medium
+particle-life-cli (1.0.6) focal; urgency=medium
+
+  * Move dependency "libncurses-dev" to Build-Depends.
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Mon, 12 Jun 2023 18:55:53 +0530
+
+particle-life-cli (1.0.5) focal; urgency=medium
+
+  * Include <curses.h> instead of <ncurses.h>.
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Mon, 12 Jun 2023 18:33:09 +0530
+
+particle-life-cli (1.0.4) focal; urgency=medium
+
+  * Add dependency "libncurses-dev" to control file.
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Mon, 12 Jun 2023 18:06:53 +0530
+
+particle-life-cli (1.0.3) focal; urgency=medium
+
+  * Source package instead of binary package.
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Mon, 12 Jun 2023 16:58:01 +0530
+
+particle-life-cli (1.0.2) focal; urgency=medium
+
+  * Bugfix: Release on "focal", not "unstable".
+
+ -- Tom Mohr <tom.g.mohr@gmail.com>  Mon, 12 Jun 2023 16:21:39 +0530
+
+particle-life-cli (1.0.1) unstable; urgency=medium
 
   * Include the binary in the package.
 

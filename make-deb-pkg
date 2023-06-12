@@ -1,8 +1,6 @@
-version="1.0.1"
+version="1.0.6"
 
 root="dist/deb"
-
-./build
 
 if [ -d "$root" ]; then
     rm -r "$root"
@@ -11,10 +9,11 @@ fi
 pkg="$root"/particle-life-cli-"$version"
 
 mkdir -p "$pkg"
-cp dist/linux/* "$pkg"
+cp -R src/ "$pkg"
+cp build "$pkg"
 
 mkdir "$pkg"/debian/
 cp -R debian/* "$pkg"/debian/
 
 cd "$pkg"
-debuild -b -sa
+debuild -S -sa

@@ -5,6 +5,10 @@
 # simply copy the binary to /usr/local/bin
 
 override_dh_auto_build:
+	./build
+
+override_dh_auto_clean:
+	rm -rf dist/
 
 override_dh_auto_install:
-	dh_install particle-life usr/bin
+	dh_install dist/linux/particle-life usr/bin

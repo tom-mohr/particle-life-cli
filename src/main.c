@@ -27,7 +27,7 @@
     #include "curses.h"
     #include "getopt.h"
 #elif __unix__
-    #include <ncurses.h>
+    #include <curses.h>
 #endif
 
 #include <unistd.h>

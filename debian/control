@@ -2,10 +2,11 @@ Source: particle-life-cli
 Section: games
 Priority: optional
 Maintainer: Tom Mohr <tom.g.mohr@gmail.com>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), libncurses-dev
 Standards-Version: 4.6.2
+Homepage: https://github.com/tom-mohr/particle-life-cli
 
 Package: particle-life-cli
-Architecture: amd64
-Depends: ${misc:Depends}
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Particle Life in the terminal.

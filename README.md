@@ -11,7 +11,14 @@ If you don't know what Particle Life is, watch [this video](https://youtu.be/p4Y
 ```sh
 choco install particle-life-cli
 ```
-This will automatically make the `particle-life` command available in your terminal.
+
+## apt (Linux)
+
+```sh
+sudo add-apt-repository ppa:tom-mohr/particle-life
+sudo apt-get update
+sudo apt-get install particle-life-cli
+```
 
 ## Manual Download (Windows, Linux)
 
@@ -105,24 +112,29 @@ as if the user had pressed `Z`.
 
 Build executable:
 ```sh
-make
+./build
 ```
 
 Run executable:
 ```sh
-dist/particle-life
+dist/linux/particle-life
+```
+or, on Windows:
+```sh
+dist/windows/particle-life
 ```
 
 Notes:
 
 - To build on unix, make sure that `ncurses` is installed. E.g. on Ubuntu like this:
   ```sh
-  sudo apt-get install libncurses5-dev libncursesw5-dev
+  sudo apt-get install libncurses-dev
   ```
   This uses `gcc` to compile the C-code and links it with `ncurses` (using the `-lncurses` option).
   Unlike on Windows, `getopt` should be implicitly available.
 - On Windows, the build uses `gcc` to compile the C-code and links it with `pdcurses` and `getopt`,
   since both these libraries are not being shipped with Windows.
+  They are therefore included in the source code, i.e. you don't have to do anything except run the build script.
   I'm using this implementation of getopt for Windows:
   [Chunde/getopt-for-windows](https://github.com/Chunde/getopt-for-windows).
 
