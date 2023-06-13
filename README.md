@@ -4,6 +4,14 @@ The `particle-life` command for creating beautiful simulations in the terminal.
 
 If you don't know what Particle Life is, watch [this video](https://youtu.be/p4YirERTVF0) (showcase) and [this video](https://youtu.be/scvuli-zcRc) (detailed explanation).
 
+# Features
+
+- [x] interactive full-screen GUI with camera controls
+- [x] animate output in the console (without fullscreen)
+- [x] print output to stdout (allows for piping with other commands)
+- [ ] save / load particle files (implementing the [Particle File Format](https://github.com/tom-mohr/particle-file-format))
+- [ ] save / load settings files
+
 # Installation
 
 ## Chocolatey (Windows)
